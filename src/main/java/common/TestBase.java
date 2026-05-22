@@ -108,4 +108,8 @@ public class TestBase {
 	public String getTextByLocator(By locator) {
 		return webDriver.findElement(locator).getText();
 	}
+	
+	public void goToPage(String url) {
+		webDriver.navigate().to(url);
+	}
 }

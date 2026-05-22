@@ -3,6 +3,8 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import tests.models.StudentRegistration;
+
 public class PracticeFormPage extends Page {
 	public By txtFirstName = By.id("firstName");
 	public By txtLastName = By.id("lastName");
@@ -27,7 +29,7 @@ public class PracticeFormPage extends Page {
 
 	}
 
-	public ThanksForSubmittingPages inputData(String firstName, String lastName, String email, String gender, String mobileNumber,
+	public ThanksForSubmittingPages inputData_1(String firstName, String lastName, String email, String gender, String mobileNumber,
 			String dateOfBirth, String subject, String hobbies, String picture, String currentAddress, String state,
 			String city) {
 		base.inputText(txtFirstName, firstName);
@@ -42,6 +44,24 @@ public class PracticeFormPage extends Page {
 		base.inputText(txtCurrentAddress, currentAddress);
 		base.fillComboBox(cbState, state);
 		base.fillComboBox(cbCity, city);
+		base.clickOnElement(btnSubmit);
+		return new ThanksForSubmittingPages(driver);
+	}
+	
+	public ThanksForSubmittingPages inputData(StudentRegistration studentRegistration) {
+		base.inputText(txtFirstName, studentRegistration.firstName);
+		base.inputText(txtLastName, studentRegistration.lastName);
+		base.inputText(txtEmail, studentRegistration.email);
+		base.selectRadioButton(rdGender, studentRegistration.gender);
+		base.inputText(txtMobile, studentRegistration.mobileNumber);
+		selectDateOfBirth(studentRegistration.dateOfBirth);
+		base.fillComboBox(cbSubject, studentRegistration.subject);
+		base.selectCheckBox(chkHobbies, studentRegistration.hobbies);
+		String picturePath = System.getProperty("user.dir") + "\\testcase\\testdata\\" + studentRegistration.picture;
+		base.inputText(txtPicture, picturePath);
+		base.inputText(txtCurrentAddress, studentRegistration.currentAddress);
+		base.fillComboBox(cbState, studentRegistration.state);
+		base.fillComboBox(cbCity, studentRegistration.city);
 		base.clickOnElement(btnSubmit);
 		return new ThanksForSubmittingPages(driver);
 	}
