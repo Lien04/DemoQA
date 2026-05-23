@@ -1,7 +1,6 @@
 package tests;
 
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
 import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.Keys;
@@ -18,20 +17,20 @@ public class WebTableTest extends TestCase {
 		// add new record
 		webTablePage.base.goToPage("https://demoqa.com/webtables");
 		// search record before add
-		webTablePage.base.inputText(webTablePage.txtSearchBox, registrationForm.firstName);
-		webTablePage.base.inputText(webTablePage.txtSearchBox, Keys.ENTER);
-		webTablePage.base.clickOnElement(webTablePage.btnAdd);
-		webTablePage.base.inputText(webTablePage.txtFirstName, registrationForm.firstName);
-		webTablePage.base.inputText(webTablePage.txtLastName, registrationForm.lastName);
-		webTablePage.base.inputText(webTablePage.txtEmail, registrationForm.email);
-		webTablePage.base.inputText(webTablePage.txtAge, registrationForm.age);
-		webTablePage.base.inputText(webTablePage.txtSalary, registrationForm.salary);
-		webTablePage.base.inputText(webTablePage.txtDepartment, registrationForm.department);
-		webTablePage.base.clickOnElement(webTablePage.btnSubmit);
+//		webTablePage.base.inputText(webTablePage.txtSearchBox, registrationForm.firstName);
+//		webTablePage.base.inputText(webTablePage.txtSearchBox, Keys.ENTER);
+//		webTablePage.base.clickOnElement(webTablePage.btnAdd);
+//		webTablePage.base.inputText(webTablePage.txtFirstName, registrationForm.firstName);
+//		webTablePage.base.inputText(webTablePage.txtLastName, registrationForm.lastName);
+//		webTablePage.base.inputText(webTablePage.txtEmail, registrationForm.email);
+//		webTablePage.base.inputText(webTablePage.txtAge, registrationForm.age);
+//		webTablePage.base.inputText(webTablePage.txtSalary, registrationForm.salary);
+//		webTablePage.base.inputText(webTablePage.txtDepartment, registrationForm.department);
+//		webTablePage.base.clickOnElement(webTablePage.btnSubmit);
 		// search record
 		webTablePage.base.inputText(webTablePage.txtSearchBox, registrationForm.firstName);
 		webTablePage.base.inputText(webTablePage.txtSearchBox, Keys.ENTER);
-		AssertJUnit.assertEquals(webTablePage.base.getTextByLocator(webTablePage.lbFirstName), registrationForm.firstName);
+		assertEquals(webTablePage.base.getTextByLocator(webTablePage.lbFirstName), registrationForm.firstName);
 		webTablePage.base.clickOnElement(webTablePage.btnDelete);
 	}
 
@@ -42,7 +41,7 @@ public class WebTableTest extends TestCase {
 		webTablePage.base.goToPage("https://demoqa.com/webtables");
 		webTablePage.base.inputText(webTablePage.txtSearchBox, lastName);
 		webTablePage.base.inputText(webTablePage.txtSearchBox, Keys.ENTER);
-		AssertJUnit.assertEquals(webTablePage.base.getTextByLocator(webTablePage.lbLastName), lastName);
+        assertEquals(webTablePage.base.getTextByLocator(webTablePage.lbLastName), lastName);
 	}
 
 	@Test
@@ -84,20 +83,40 @@ public class WebTableTest extends TestCase {
 		webTablePage.base.inputText(webTablePage.txtSearchBox,Keys.ENTER);
 		assertEquals(webTablePage.base.getTextByLocator(webTablePage.lbDepartment),department);
 	}
+	
+	@Test(testName = "SearchFunction", dataProvider = "WebTable_TC01")
+	public void searchByDepartment(RegistrationForm registrationForm) {
+		WebTablePage webTablePage = new WebTablePage(testBase.webDriver);
+		webTablePage.base.goToPage("https://demoqa.com/webtables");
+		webTablePage.searchByText(registrationForm.searchText);
+		if (webTablePage.base.getTextByLocator(webTablePage.lbSearchResult).isEmpty()
+				|| webTablePage.base.getTextByLocator(webTablePage.lbSearchResult).isBlank()) {
+			webTablePage.createData(registrationForm);
+		}
+//		try {
+//			Thread.sleep(300);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
 
+		assertEquals(webTablePage.base.getTextByLocator(webTablePage.lbDepartment), registrationForm.department);
+	}
+	
 	@DataProvider(name = "WebTable_TC01")
-	public RegistrationForm[] readWebTableData() {
+	public RegistrationForm[] readDataForNewRecord() {
 		Utils utils = new Utils();
 		String[][] data = utils.readDataFromCSV("WebTable_TC01.csv");
-		RegistrationForm registrationForm = new RegistrationForm();
-		registrationForm.firstName = data[0][0];
-		registrationForm.lastName = data[0][1];
-		registrationForm.email = data[0][2];
-		registrationForm.age = data[0][3];
-		registrationForm.salary = data[0][4];
-		registrationForm.department = data[0][5];
-		RegistrationForm[] registrationForms = new RegistrationForm[1];
-		registrationForms[0] = registrationForm;
+		RegistrationForm[] registrationForms = new RegistrationForm[data.length];
+		for (int i = 0; i < data.length; i++) {
+			RegistrationForm registrationForm = new RegistrationForm();
+			registrationForm.firstName = data[0][0];
+			registrationForm.lastName = data[0][1];
+			registrationForm.age = data[0][2];
+			registrationForm.email = data[0][3];
+			registrationForm.salary = data[0][4];
+			registrationForm.department = data[0][5];
+			registrationForms[0] = registrationForm;
+		}
 		return registrationForms;
 	}
 }

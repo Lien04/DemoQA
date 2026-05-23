@@ -7,4 +7,6 @@ public class RegistrationForm {
 	public String age;
 	public String salary;
 	public String department;
+	public String searchBy;
+	public String searchText;
 }
