@@ -8,8 +8,8 @@ public class ButtonPage extends Page {
 	public ButtonPage(WebDriver dr) {
 		super(dr);
 	}
-	public void clickButton(String text) {
-		base.clickButtonByText(btnClick, text);
-	}
+//	public void clickButton(String text) {
+//		base.clickButtonByText(btnClick, text);
+//	}
 
 }

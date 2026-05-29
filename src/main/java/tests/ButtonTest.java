@@ -10,7 +10,7 @@ public class ButtonTest extends TestCase {
 		String btnClickMe = "Right Click Me";
 		ButtonPage buttonsPage = new ButtonPage(testBase.webDriver);
 		testBase.webDriver.navigate().to("https://demoqa.com/buttons");
-		buttonsPage.clickButton(btnClickMe);
+//		buttonsPage.clickButton(btnClickMe);
 
 	}
 

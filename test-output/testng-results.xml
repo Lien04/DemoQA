@@ -1,27 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-17T11:45:10 ICT" name="Default suite" finished-at="2026-05-17T11:45:16 ICT" duration-ms="6237">
+  <suite started-at="2026-05-24T10:50:14 ICT" name="Default suite" finished-at="2026-05-24T10:50:32 ICT" duration-ms="18099">
     <groups>
     </groups>
-    <test started-at="2026-05-17T11:45:10 ICT" name="Default test" finished-at="2026-05-17T11:45:16 ICT" duration-ms="6237">
+    <test started-at="2026-05-24T10:50:14 ICT" name="Default test" finished-at="2026-05-24T10:50:32 ICT" duration-ms="18099">
       <class name="tests.WebTableTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.WebTableTest@55fe41ea]" started-at="2026-05-17T11:45:10 ICT" name="setUp" finished-at="2026-05-17T11:45:14 ICT" duration-ms="4025" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.WebTableTest@4b2bac3f]" started-at="2026-05-24T10:50:14 ICT" name="setUp" finished-at="2026-05-24T10:50:18 ICT" duration-ms="4110" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="searchByFirstName(tests.models.RegistrationForm)[pri:0, instance:tests.WebTableTest@55fe41ea]" started-at="2026-05-17T11:45:14 ICT" name="searchByFirstName" data-provider="WebTable_TC01" finished-at="2026-05-17T11:45:16 ICT" duration-ms="2165" status="PASS">
+        <test-method signature="searchBy(tests.models.RegistrationForm)[pri:0, instance:tests.WebTableTest@4b2bac3f]" started-at="2026-05-24T10:50:18 ICT" name="searchBy" data-provider="WebTable_TC01" finished-at="2026-05-24T10:50:21 ICT" duration-ms="2617" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[tests.models.RegistrationForm@3fffff43]]>
+                <![CDATA[tests.models.RegistrationForm@60dce7ea]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchByFirstName -->
+        </test-method> <!-- searchBy -->
+        <test-method signature="searchBy(tests.models.RegistrationForm)[pri:0, instance:tests.WebTableTest@4b2bac3f]" started-at="2026-05-24T10:50:21 ICT" name="searchBy" data-provider="WebTable_TC01" finished-at="2026-05-24T10:50:23 ICT" duration-ms="2420" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[tests.models.RegistrationForm@52350abb]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBy -->
+        <test-method signature="searchBy(tests.models.RegistrationForm)[pri:0, instance:tests.WebTableTest@4b2bac3f]" started-at="2026-05-24T10:50:23 ICT" name="searchBy" data-provider="WebTable_TC01" finished-at="2026-05-24T10:50:25 ICT" duration-ms="2264" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[tests.models.RegistrationForm@22df874e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBy -->
+        <test-method signature="searchBy(tests.models.RegistrationForm)[pri:0, instance:tests.WebTableTest@4b2bac3f]" started-at="2026-05-24T10:50:25 ICT" name="searchBy" data-provider="WebTable_TC01" finished-at="2026-05-24T10:50:27 ICT" duration-ms="2156" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[tests.models.RegistrationForm@4a9486c0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBy -->
+        <test-method signature="searchBy(tests.models.RegistrationForm)[pri:0, instance:tests.WebTableTest@4b2bac3f]" started-at="2026-05-24T10:50:27 ICT" name="searchBy" data-provider="WebTable_TC01" finished-at="2026-05-24T10:50:30 ICT" duration-ms="2219" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[tests.models.RegistrationForm@1e008f36]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBy -->
+        <test-method signature="searchBy(tests.models.RegistrationForm)[pri:0, instance:tests.WebTableTest@4b2bac3f]" started-at="2026-05-24T10:50:30 ICT" name="searchBy" data-provider="WebTable_TC01" finished-at="2026-05-24T10:50:32 ICT" duration-ms="2243" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[tests.models.RegistrationForm@4422dd48]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBy -->
       </class> <!-- tests.WebTableTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
