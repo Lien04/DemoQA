@@ -1,0 +1,7 @@
+"firstName","lastName","age","email","salary","department","searchBy","searchText"
+"Lien","Trinh","21","abc@gmail.com","400000","HN","firstName","Lien"
+"Lien","Trinh","21","abc@gmail.com","400000","HN","lastName","Trinh"
+"Lien","Trinh","21","abc@gmail.com","400000","HN","age","21"
+"Lien","Trinh","21","abc@gmail.com","400000","HN","email","abc@gmail.com"
+"Lien","Trinh","21","abc@gmail.com","400000","HN","salary","400000"
+"Lien","Trinh","21","abc@gmail.com","400000","HN","department","HN"
