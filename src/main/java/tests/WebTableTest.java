@@ -3,8 +3,6 @@ package tests;
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.DataProvider;
 import common.Utils;
 import pages.WebTablePage;

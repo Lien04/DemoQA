@@ -2,8 +2,6 @@ package common;
 
 import java.time.Duration;
 
-import javax.lang.model.element.Element;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
