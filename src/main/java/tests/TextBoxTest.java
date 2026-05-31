@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 public class TextBoxTest extends TestCase {
-	@Test
+	@Test(groups="regression test")
 	public void submitDataSuccessfully() {
 		System.setProperty("webdriver.chrome.driver",
 				"D:\\01_AutomationClass202604\\03_Practices\\02Projects\\Git\\DemoQA\\DemoQA\\driver\\chromedriver.exe");
@@ -24,7 +24,7 @@ public class TextBoxTest extends TestCase {
 
 	}
 	
-	@Test
+	@Test(groups="validation")
 	public void submitDataFail() {
 		System.setProperty("webdriver.chrome.driver",
 				"D:\\01_AutomationClass202604\\03_Practices\\02Projects\\Git\\DemoQA\\DemoQA\\driver\\chromedriver.exe");
