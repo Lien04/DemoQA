@@ -3,15 +3,13 @@
 <suite name="DemoQA">
 	<test name="HappyCase">
 
-		<!--<groups>
+		<groups>
 			<run>
-				<include name="regression test"/>
+				<include name="regression"/>
 			</run>
-		</groups>-->
+		</groups>
 		
 		<classes>
-			<class name="tests.TextBoxTest" />
-			<class name="tests.PracticeFormTest" />
 			<class name="tests.AlertsTest" />
 		</classes>
 	</test> <!-- SampleTestNG -->
