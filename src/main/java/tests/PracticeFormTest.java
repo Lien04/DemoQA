@@ -15,23 +15,7 @@ public class PracticeFormTest extends TestCase {
 	public void submitDataSuccessfully_DataProvider(String firstName, String lastName, String email, String gender,
 			String mobileNumber, String dateOfBirth, String subject, String hobbies, String picture,
 			String currentAddress, String state, String city) {
-		String picturePath = System.getProperty("user.dir") + "\\testcase\\TestData\\" + picture;
-//		String firstName = "Lien" ;
-//		String lastName = "Trinh";
-//		String email = "trinhlien10101@gmail.com";
-//		String gender = "Female";
-//		String mobileNumber = "0865101004";
-//		String dateOfBirthYear = "2004";
-//		String dateOfBirthDayAndMonth = "10 Oct";
-//		String dateOfBirth = dateOfBirthDayAndMonth + " " + dateOfBirthYear;
-//		String subject = "Maths, English, Chemistry";
-//		String hobbies = "Sports, Reading, Music";
-//		String projectPath = System.getProperty("user.dir");
-//		String fileName = "BÒ1.jpg";
-//		String picture = projectPath + "\\testcase\\TestData\\" + fileName;
-//		String currentAddress = "Pham Van Dong";
-//		String state = "NCR";
-//		String city = "Noida";
+		String picturePath = System.getProperty("user.dir") + "\\testcase\\TestData\\" + picture;		
 
 		PracticeFormPage practiceFormPage = new PracticeFormPage(testBase.webDriver);
 		testBase.webDriver.navigate().to("https://demoqa.com/automation-practice-form");
@@ -65,7 +49,7 @@ public class PracticeFormTest extends TestCase {
 
 	}
 
-	@Test(dataProvider = "PracticeForm_TC01_1")
+	@Test(dataProvider = "PracticeForm_TC01_1", groups = "regression test")
 	public void submitDataSuccessfully(StudentRegistration studentRegistration) {
 		PracticeFormPage practiceFormPage = new PracticeFormPage(testBase.webDriver);
 		testBase.webDriver.navigate().to("https://demoqa.com/automation-practice-form");
@@ -98,7 +82,7 @@ public class PracticeFormTest extends TestCase {
 		assertEquals(actualStateAndCity, givenStateAndCity);
 	}
 
-	@Test
+	@Test(groups = "validation")
 	public void TC_02(String firstName, String lastName, String email, String gender,
 			String mobileNumber, String dateOfBirth, String subject, String hobbies, String picture,
 			String currentAddress, String state, String city) {

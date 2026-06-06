@@ -21,6 +21,7 @@ public class TestBase {
 		String projectPath = System.getProperty("user.dir");
 		if (browserName.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", projectPath + "\\driver\\chromedriver.exe");
+			System.out.println(projectPath);
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--remote-allow-origins=*");
 			webDriver = new ChromeDriver(options);

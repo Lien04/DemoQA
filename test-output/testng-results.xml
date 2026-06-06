@@ -1,86 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-30T11:21:14 ICT" name="Default suite" finished-at="2026-05-30T11:24:20 ICT" duration-ms="185635">
+  <suite started-at="2026-06-06T10:06:03 ICT" name="DemoQA" finished-at="2026-06-06T10:06:40 ICT" duration-ms="36926">
     <groups>
     </groups>
-    <test started-at="2026-05-30T11:21:14 ICT" name="Default test" finished-at="2026-05-30T11:24:20 ICT" duration-ms="185635">
-      <class name="tests.BrowserWindowsTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.BrowserWindowsTests@77c2494c]" started-at="2026-05-30T11:21:14 ICT" name="setUp" finished-at="2026-05-30T11:21:18 ICT" duration-ms="4531" status="PASS">
+    <test started-at="2026-06-06T10:06:03 ICT" name="HappyCase" finished-at="2026-06-06T10:06:40 ICT" duration-ms="36926">
+      <class name="tests.AlertsTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AlertsTest@74235045]" started-at="2026-06-06T10:06:03 ICT" name="setUp" finished-at="2026-06-06T10:06:08 ICT" duration-ms="4872" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyNewWindowMessage()[pri:0, instance:tests.BrowserWindowsTests@77c2494c]" started-at="2026-05-30T11:21:18 ICT" name="verifyNewWindowMessage" finished-at="2026-05-30T11:24:20 ICT" duration-ms="181063" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[java.util.concurrent.TimeoutException
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c7b245eec95153cb876247a26c65e82c, getCurrentUrl {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.181, chrome: {chromedriverVersion: 147.0.7727.116 (dbcf1b1bfb5..., userDataDir: C:\Users\JK\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:22296}, goog:processID: 15560, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:22296/devtoo..., se:cdpVersion: 148.0.7778.181, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c7b245eec95153cb876247a26c65e82c]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c7b245eec95153cb876247a26c65e82c, getCurrentUrl {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.181, chrome: {chromedriverVersion: 147.0.7727.116 (dbcf1b1bfb5..., userDataDir: C:\Users\JK\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:22296}, goog:processID: 15560, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:22296/devtoo..., se:cdpVersion: 148.0.7778.181, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c7b245eec95153cb876247a26c65e82c
-at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:429)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:220)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:688)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:692)
-at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:386)
-at pages.BrowserWindowsPage.clickNewWindowMessage(BrowserWindowsPage.java:54)
-at tests.BrowserWindowsTests.verifyNewWindowMessage(BrowserWindowsTests.java:42)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.util.concurrent.TimeoutException
-at java.base/java.util.concurrent.CompletableFuture$Timeout.run(CompletableFuture.java:2920)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="verifyAlertWithAButton()[pri:0, instance:tests.AlertsTest@74235045]" started-at="2026-06-06T10:06:08 ICT" name="verifyAlertWithAButton" finished-at="2026-06-06T10:06:09 ICT" duration-ms="828" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyNewWindowMessage -->
-      </class> <!-- tests.BrowserWindowsTests -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- verifyAlertWithAButton -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AlertsTest@74235045]" started-at="2026-06-06T10:06:09 ICT" name="tearDown" finished-at="2026-06-06T10:06:12 ICT" duration-ms="3211" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AlertsTest@74235045]" started-at="2026-06-06T10:06:12 ICT" name="setUp" finished-at="2026-06-06T10:06:16 ICT" duration-ms="3465" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyAlertWithAConfirm()[pri:0, instance:tests.AlertsTest@74235045]" started-at="2026-06-06T10:06:16 ICT" name="verifyAlertWithAConfirm" finished-at="2026-06-06T10:06:16 ICT" duration-ms="938" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAlertWithAConfirm -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AlertsTest@74235045]" started-at="2026-06-06T10:06:16 ICT" name="tearDown" finished-at="2026-06-06T10:06:20 ICT" duration-ms="3161" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AlertsTest@74235045]" started-at="2026-06-06T10:06:20 ICT" name="setUp" finished-at="2026-06-06T10:06:23 ICT" duration-ms="3417" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyAlertWithAPrompt()[pri:0, instance:tests.AlertsTest@74235045]" started-at="2026-06-06T10:06:23 ICT" name="verifyAlertWithAPrompt" finished-at="2026-06-06T10:06:24 ICT" duration-ms="1008" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAlertWithAPrompt -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AlertsTest@74235045]" started-at="2026-06-06T10:06:24 ICT" name="tearDown" finished-at="2026-06-06T10:06:27 ICT" duration-ms="3233" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AlertsTest@74235045]" started-at="2026-06-06T10:06:27 ICT" name="setUp" finished-at="2026-06-06T10:06:31 ICT" duration-ms="3453" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyAlertWithATime()[pri:0, instance:tests.AlertsTest@74235045]" started-at="2026-06-06T10:06:31 ICT" name="verifyAlertWithATime" finished-at="2026-06-06T10:06:37 ICT" duration-ms="6004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAlertWithATime -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AlertsTest@74235045]" started-at="2026-06-06T10:06:37 ICT" name="tearDown" finished-at="2026-06-06T10:06:40 ICT" duration-ms="3278" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.AlertsTest -->
+    </test> <!-- HappyCase -->
+  </suite> <!-- DemoQA -->
 </testng-results>
